@@ -31,25 +31,40 @@ services:
       timeout: 5s
       retries: 5
 
+  migrate:
+    image: node:22-alpine
+    container_name: tgchannels_migrate
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      DATABASE_URL: postgresql://tgchannels:password@postgres:5432/tgchannels
+    command: >
+      sh -c "npm install -g pnpm &&
+             pnpm install --frozen-lockfile &&
+             node node_modules/.bin/prisma migrate deploy &&
+             node node_modules/.bin/ts-node --compiler-options '{\"module\":\"CommonJS\"}' prisma/seed.ts || true"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
   app:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - NEXTAUTH_SECRET=tgchannels-docker-secret-change-in-production
     container_name: tgchannels_app
     ports:
       - '3000:3000'
-    environment:
-      DATABASE_URL: postgresql://tgchannels:password@postgres:5432/tgchannels
-      REDIS_URL: redis://redis:6379
+    env_file:
+      - .env.docker
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/.next
+    restart: unless-stopped
 
 volumes:
   postgres_data:
