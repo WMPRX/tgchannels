@@ -1,0 +1,247 @@
+{
+  "common": {
+    "siteName": "TGChannels",
+    "slogan": "Explore Communities",
+    "join": "Join",
+    "add": "Add",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "save": "Save",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "viewAll": "View All",
+    "back": "Back",
+    "close": "Close",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "share": "Share",
+    "report": "Report",
+    "views": "views",
+    "promote": "Promote",
+    "search": "Search"
+  },
+  "nav": {
+    "home": "Home",
+    "add": "Add",
+    "lists": "Lists",
+    "promote": "Promote",
+    "menu": "Menu",
+    "panel": "My Panel",
+    "admin": "Admin",
+    "about": "About",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "blog": "Blog",
+    "advertise": "Advertise"
+  },
+  "home": {
+    "hero": {
+      "title": "TGChannels",
+      "subtitle": "Explore Communities",
+      "description": "Discover WhatsApp, Telegram and Discord communities or share your own group."
+    },
+    "platforms": {
+      "whatsappGroups": "WhatsApp Groups",
+      "whatsappChannels": "WhatsApp Channels",
+      "telegramGroups": "Telegram Groups",
+      "telegramChannels": "Telegram Channels",
+      "discordServers": "Discord Servers",
+      "viewGroups": "View Groups",
+      "viewChannels": "View Channels",
+      "viewServers": "View Servers"
+    },
+    "popular": {
+      "title": "Most Popular",
+      "whatsappGroups": "Most Popular WhatsApp Groups",
+      "telegramGroups": "Most Popular Telegram Groups",
+      "discordServers": "Most Popular Discord Servers",
+      "telegramChannels": "Most Popular Telegram Channels",
+      "chatGroups": "Most Popular Chat/Friendship Groups",
+      "jobGroups": "Job Posting Groups"
+    },
+    "cta": {
+      "title": "Add your group, channel or server",
+      "description": "Reach thousands of users with your community. Add for free, be visible instantly.",
+      "button": "Add Now"
+    }
+  },
+  "listing": {
+    "tabs": {
+      "newest": "Newest",
+      "popular": "Popular",
+      "least": "Least Viewed"
+    },
+    "allCategories": "All Categories",
+    "noGroups": "No groups found yet.",
+    "loadMore": "Load More",
+    "promote": {
+      "title": "Promote Your Group!",
+      "description": "With 7-day promotion, your group appears at the top of the list.",
+      "price": "7 days = 243.60 ₺",
+      "button": "Promote"
+    }
+  },
+  "group": {
+    "addedBy": "Added by",
+    "addedAt": "Added",
+    "category": "Category",
+    "platform": "Platform",
+    "language": "Language",
+    "viewCount": "Views",
+    "joinButton": "Join Group",
+    "joinChannelButton": "Join Channel",
+    "joinServerButton": "Join Server",
+    "similar": "Similar Groups",
+    "highlighted": "Featured",
+    "redirect": {
+      "title": "Redirect Confirmation",
+      "message": "This link will redirect you to an external application. Do you want to continue?",
+      "confirm": "Yes, Continue",
+      "cancel": "No, Cancel"
+    },
+    "share": {
+      "title": "Share",
+      "copyLink": "Copy Link",
+      "shareWhatsApp": "Share via WhatsApp",
+      "shareTelegram": "Share via Telegram"
+    },
+    "report": {
+      "title": "Report",
+      "reason": "Reason",
+      "note": "Note (optional)",
+      "submit": "Submit",
+      "reasons": {
+        "invalid_link": "Invalid invite link",
+        "illegal_content": "Illegal/inappropriate/sexual content",
+        "misleading": "Misleading/fraud",
+        "other": "Other"
+      },
+      "success": "Your report has been received. Thank you.",
+      "rateLimitError": "Too many reports sent. Please try again later."
+    }
+  },
+  "add": {
+    "title": "Add Group/Channel",
+    "platform": "Platform",
+    "selectPlatform": "Select platform",
+    "type": "Type",
+    "group": "Group",
+    "channel": "Channel",
+    "server": "Server",
+    "name": "Name",
+    "namePlaceholder": "Enter group/channel name",
+    "inviteLink": "Invite Link",
+    "inviteLinkPlaceholder": "Enter invite link",
+    "category": "Category",
+    "selectCategory": "Select category",
+    "description": "Description",
+    "descriptionPlaceholder": "Introduce your group (at least 50 characters)",
+    "language": "Language",
+    "submit": "Submit",
+    "loginRequired": "You must be logged in to add a group.",
+    "pending": "Your group has been submitted for review. It will be published after admin approval.",
+    "validation": {
+      "titleRequired": "Group name is required",
+      "inviteLinkRequired": "Invite link is required",
+      "inviteLinkInvalid": "Invalid invite link format",
+      "categoryRequired": "Category selection is required",
+      "descriptionRequired": "Description is required",
+      "descriptionMinLength": "Description must be at least 50 characters"
+    }
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "registerTitle": "Register",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "loginButton": "Login",
+    "registerButton": "Register",
+    "googleLogin": "Login with Google",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "forgotPassword": "Forgot Password",
+    "loginError": "Invalid email or password",
+    "registerError": "An error occurred during registration"
+  },
+  "panel": {
+    "title": "My Panel",
+    "myGroups": "My Groups",
+    "noGroups": "You haven't added any groups yet.",
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "removed": "Removed"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Are you sure you want to delete this group?",
+    "promote": "Promote",
+    "settings": "Account Settings"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "stats": "Statistics",
+    "totalGroups": "Total Groups",
+    "pendingGroups": "Pending Groups",
+    "approvedGroups": "Approved Groups",
+    "totalUsers": "Total Users",
+    "totalReports": "Total Reports",
+    "pendingReports": "Pending Reports",
+    "approve": "Approve",
+    "reject": "Reject",
+    "remove": "Remove",
+    "review": "Review",
+    "dismiss": "Dismiss",
+    "pending": "Pending Groups",
+    "allGroups": "All Groups",
+    "reports": "Reports",
+    "users": "Users",
+    "sponsors": "Sponsor Links",
+    "categories": "Categories"
+  },
+  "footer": {
+    "sponsored": "Sponsored Links",
+    "copyright": "© 2024 TGChannels. All rights reserved.",
+    "description": "Discover WhatsApp, Telegram and Discord communities."
+  },
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "description": "TGChannels is a community directory platform where users can discover and share WhatsApp groups, Telegram groups and channels, and Discord servers."
+    },
+    "contact": {
+      "title": "Contact",
+      "name": "Your Name",
+      "email": "Email",
+      "message": "Your Message",
+      "send": "Send"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    },
+    "privacy": {
+      "title": "Privacy Policy"
+    },
+    "blog": {
+      "title": "Blog"
+    },
+    "advertise": {
+      "title": "Advertise",
+      "description": "Contact us to advertise on TGChannels."
+    },
+    "lists": {
+      "title": "All Lists"
+    }
+  },
+  "breadcrumb": {
+    "home": "Home"
+  }
+}

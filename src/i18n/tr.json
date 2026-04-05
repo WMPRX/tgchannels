@@ -1,0 +1,247 @@
+{
+  "common": {
+    "siteName": "TGChannels",
+    "slogan": "Toplulukları Keşfedin",
+    "join": "Katıl",
+    "add": "Ekle",
+    "login": "Giriş",
+    "logout": "Çıkış",
+    "register": "Kayıt Ol",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "yes": "Evet",
+    "no": "Hayır",
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "success": "Başarılı",
+    "viewAll": "Tümünü Gör",
+    "back": "Geri",
+    "close": "Kapat",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "share": "Paylaş",
+    "report": "Rapor Et",
+    "views": "görüntülenme",
+    "promote": "Öne Çıkar",
+    "search": "Ara"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "add": "Ekle",
+    "lists": "Listeler",
+    "promote": "Öne Çıkar",
+    "menu": "Menü",
+    "panel": "Panelim",
+    "admin": "Yönetim",
+    "about": "Hakkımızda",
+    "contact": "İletisim",
+    "faq": "SSS",
+    "privacy": "Gizlilik",
+    "blog": "Blog",
+    "advertise": "Reklam"
+  },
+  "home": {
+    "hero": {
+      "title": "TGChannels",
+      "subtitle": "Toplulukları Keşfedin",
+      "description": "WhatsApp, Telegram ve Discord topluluklarını keşfedin veya kendi grubunuzu paylaşın."
+    },
+    "platforms": {
+      "whatsappGroups": "WhatsApp Grupları",
+      "whatsappChannels": "WhatsApp Kanalları",
+      "telegramGroups": "Telegram Grupları",
+      "telegramChannels": "Telegram Kanalları",
+      "discordServers": "Discord Sunucuları",
+      "viewGroups": "Grupları Görüntüle",
+      "viewChannels": "Kanalları Görüntüle",
+      "viewServers": "Sunucuları Görüntüle"
+    },
+    "popular": {
+      "title": "En Popüler",
+      "whatsappGroups": "En Popüler WhatsApp Grupları",
+      "telegramGroups": "En Popüler Telegram Grupları",
+      "discordServers": "En Popüler Discord Sunucuları",
+      "telegramChannels": "En Popüler Telegram Kanalları",
+      "chatGroups": "En Popüler Sohbet/Arkadaşlık Grupları",
+      "jobGroups": "İş İlanı Grupları"
+    },
+    "cta": {
+      "title": "Grubunu, kanalını veya sunucunu sen de ekle",
+      "description": "Topluluğunu binlerce kullanıcıya duyur. Ücretsiz ekle, anında görünür ol.",
+      "button": "Hemen Ekle"
+    }
+  },
+  "listing": {
+    "tabs": {
+      "newest": "En Yeniler",
+      "popular": "Popüler",
+      "least": "Az Görüntülenen"
+    },
+    "allCategories": "Tüm Kategoriler",
+    "noGroups": "Henüz grup bulunamadı.",
+    "loadMore": "Daha Fazla Yükle",
+    "promote": {
+      "title": "Grubunu Öne Çıkar!",
+      "description": "7 günlük öne çıkarma ile grubun listenin en üstünde görünsün.",
+      "price": "7 gün = 243,60 ₺",
+      "button": "Öne Çıkar"
+    }
+  },
+  "group": {
+    "addedBy": "Ekleyen",
+    "addedAt": "Eklenme Tarihi",
+    "category": "Kategori",
+    "platform": "Platform",
+    "language": "Dil",
+    "viewCount": "Görüntülenme",
+    "joinButton": "Gruba Katıl",
+    "joinChannelButton": "Kanala Katıl",
+    "joinServerButton": "Sunucuya Katıl",
+    "similar": "Benzer Gruplar",
+    "highlighted": "Öne Çıkan",
+    "redirect": {
+      "title": "Yönlendirme Onayı",
+      "message": "Bu bağlantı sizi harici bir uygulamaya yönlendirecek. Devam etmek istiyor musunuz?",
+      "confirm": "Evet, Devam Et",
+      "cancel": "Hayır, İptal"
+    },
+    "share": {
+      "title": "Paylaş",
+      "copyLink": "Bağlantıyı Kopyala",
+      "shareWhatsApp": "WhatsApp ile Paylaş",
+      "shareTelegram": "Telegram ile Paylaş"
+    },
+    "report": {
+      "title": "Rapor Et",
+      "reason": "Sebep",
+      "note": "Not (opsiyonel)",
+      "submit": "Gönder",
+      "reasons": {
+        "invalid_link": "Davet linki geçersiz",
+        "illegal_content": "Yasadışı/uygunsuz/cinsel içerik",
+        "misleading": "Yanıltıcı/dolandırıcılık",
+        "other": "Diğer"
+      },
+      "success": "Raporunuz alındı. Teşekkürler.",
+      "rateLimitError": "Çok fazla rapor gönderdiniz. Lütfen daha sonra tekrar deneyin."
+    }
+  },
+  "add": {
+    "title": "Grup/Kanal Ekle",
+    "platform": "Platform",
+    "selectPlatform": "Platform seçin",
+    "type": "Tür",
+    "group": "Grup",
+    "channel": "Kanal",
+    "server": "Sunucu",
+    "name": "Ad",
+    "namePlaceholder": "Grup/kanal adını girin",
+    "inviteLink": "Davet Linki",
+    "inviteLinkPlaceholder": "Davet linkini girin",
+    "category": "Kategori",
+    "selectCategory": "Kategori seçin",
+    "description": "Açıklama",
+    "descriptionPlaceholder": "Grubunuzu tanıtın (en az 50 karakter)",
+    "language": "Dil",
+    "submit": "Gönder",
+    "loginRequired": "Grup eklemek için giriş yapmalısınız.",
+    "pending": "Grubunuz inceleme için gönderildi. Admin onayından sonra yayınlanacak.",
+    "validation": {
+      "titleRequired": "Grup adı zorunludur",
+      "inviteLinkRequired": "Davet linki zorunludur",
+      "inviteLinkInvalid": "Geçersiz davet linki formatı",
+      "categoryRequired": "Kategori seçimi zorunludur",
+      "descriptionRequired": "Açıklama zorunludur",
+      "descriptionMinLength": "Açıklama en az 50 karakter olmalıdır"
+    }
+  },
+  "auth": {
+    "loginTitle": "Giriş Yap",
+    "registerTitle": "Kayıt Ol",
+    "email": "E-posta",
+    "password": "Şifre",
+    "username": "Kullanıcı Adı",
+    "loginButton": "Giriş Yap",
+    "registerButton": "Kayıt Ol",
+    "googleLogin": "Google ile Giriş Yap",
+    "noAccount": "Hesabınız yok mu?",
+    "hasAccount": "Zaten hesabınız var mı?",
+    "forgotPassword": "Şifremi Unuttum",
+    "loginError": "E-posta veya şifre hatalı",
+    "registerError": "Kayıt sırasında bir hata oluştu"
+  },
+  "panel": {
+    "title": "Panelim",
+    "myGroups": "Gruplarım",
+    "noGroups": "Henüz grup eklemediniz.",
+    "status": {
+      "pending": "Beklemede",
+      "approved": "Onaylandı",
+      "rejected": "Reddedildi",
+      "removed": "Kaldırıldı"
+    },
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "deleteConfirm": "Bu grubu silmek istediğinizden emin misiniz?",
+    "promote": "Öne Çıkar",
+    "settings": "Hesap Ayarları"
+  },
+  "admin": {
+    "title": "Yönetim Paneli",
+    "stats": "İstatistikler",
+    "totalGroups": "Toplam Grup",
+    "pendingGroups": "Bekleyen Grup",
+    "approvedGroups": "Onaylı Grup",
+    "totalUsers": "Toplam Kullanıcı",
+    "totalReports": "Toplam Rapor",
+    "pendingReports": "Bekleyen Rapor",
+    "approve": "Onayla",
+    "reject": "Reddet",
+    "remove": "Kaldır",
+    "review": "İncele",
+    "dismiss": "Yoksay",
+    "pending": "Bekleyen Gruplar",
+    "allGroups": "Tüm Gruplar",
+    "reports": "Raporlar",
+    "users": "Kullanıcılar",
+    "sponsors": "Sponsor Bağlantılar",
+    "categories": "Kategoriler"
+  },
+  "footer": {
+    "sponsored": "Sponsorlu Bağlantılar",
+    "copyright": "© 2024 TGChannels. Tüm hakları saklıdır.",
+    "description": "WhatsApp, Telegram ve Discord topluluklarını keşfedin."
+  },
+  "pages": {
+    "about": {
+      "title": "Hakkımızda",
+      "description": "TGChannels, kullanıcıların WhatsApp grupları, Telegram grupları ve kanalları ile Discord sunucularını keşfedebildiği ve paylaşabildiği bir topluluk dizin platformudur."
+    },
+    "contact": {
+      "title": "İletişim",
+      "name": "Adınız",
+      "email": "E-posta",
+      "message": "Mesajınız",
+      "send": "Gönder"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular"
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası"
+    },
+    "blog": {
+      "title": "Blog"
+    },
+    "advertise": {
+      "title": "Reklam",
+      "description": "TGChannels'da reklam vermek için bizimle iletişime geçin."
+    },
+    "lists": {
+      "title": "Tüm Listeler"
+    }
+  },
+  "breadcrumb": {
+    "home": "Ana Sayfa"
+  }
+}
