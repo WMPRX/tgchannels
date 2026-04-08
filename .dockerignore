@@ -1,0 +1,8 @@
+node_modules
+.next
+.git
+.env
+.env.docker
+*.log
+coverage
+.DS_Store
