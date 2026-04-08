@@ -5,7 +5,10 @@ RUN npm install -g pnpm
 # ── 1. Install dependencies ──────────────────────────────────────────────────
 FROM base AS deps
 WORKDIR /app
+# Copy prisma schema BEFORE install so Prisma postinstall can run generate
 COPY package.json pnpm-lock.yaml ./
+COPY prisma ./prisma
+# pnpm v10: onlyBuiltDependencies in package.json allows Prisma scripts to run
 RUN pnpm install --frozen-lockfile
 
 # ── 2. Build the application ─────────────────────────────────────────────────
@@ -13,10 +16,6 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Generate Prisma client for the target platform (linux-musl-openssl-3.0.x)
-RUN node node_modules/.bin/prisma generate
-
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN pnpm build
 
@@ -36,7 +35,7 @@ COPY --from=builder /app/public                         ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static     ./.next/static
 
-# Prisma query-engine binary lives in .prisma, not bundled by standalone
+# Prisma query-engine binary (not bundled by standalone)
 COPY --from=builder /app/node_modules/.prisma           ./node_modules/.prisma
 COPY --from=builder /app/prisma/schema.prisma           ./prisma/schema.prisma
 
