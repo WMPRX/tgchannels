@@ -1,57 +1,48 @@
 FROM node:22-alpine AS base
-
-# Install dependencies only when needed
-FROM base AS deps
 RUN apk add --no-cache libc6-compat openssl
-WORKDIR /app
-
-# Install pnpm
 RUN npm install -g pnpm
 
+# ── 1. Install dependencies ──────────────────────────────────────────────────
+FROM base AS deps
+WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
-# Rebuild the source code only when needed
+# ── 2. Build the application ─────────────────────────────────────────────────
 FROM base AS builder
-RUN apk add --no-cache openssl
 WORKDIR /app
-RUN npm install -g pnpm
-
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Generate Prisma client
+# Generate Prisma client for the target platform (linux-musl-openssl-3.0.x)
 RUN node node_modules/.bin/prisma generate
 
-ENV NEXT_TELEMETRY_DISABLED 1
-
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN pnpm build
 
-# Production image
-FROM base AS runner
+# ── 3. Production runner ──────────────────────────────────────────────────────
+FROM node:22-alpine AS runner
 RUN apk add --no-cache openssl
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser  --system --uid 1001 nextjs
 
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/prisma ./prisma
-COPY --from=builder /app/node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/@prisma/client ./node_modules/@prisma/client
-COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
-
-# Copy Next.js build
+# Next.js standalone output bundles required node_modules automatically
+COPY --from=builder /app/public                         ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static     ./.next/static
+
+# Prisma query-engine binary lives in .prisma, not bundled by standalone
+COPY --from=builder /app/node_modules/.prisma           ./node_modules/.prisma
+COPY --from=builder /app/prisma/schema.prisma           ./prisma/schema.prisma
 
 USER nextjs
-
 EXPOSE 3000
-
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
 
 CMD ["node", "server.js"]
